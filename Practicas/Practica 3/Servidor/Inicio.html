@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=shortcut icon href=favicon.ico type=image/x-icon />
+    <title>Formulario de registro</title>
+</head>
+<body">
+    <div class="header">
+        <p>Ejemplo sencillo de un formulario</p>
+        <p>Formulario de Registro</p>
+        <img class="img" src="eva.jpg" alt="">
+    </div>
+    <div class="contenedor">
+        <div class="mGet">
+            <FORM method="GET" action="parametros.html"> 
+                <h3>Método GET</h3>
+                Nombre: <BR>
+                <INPUT TYPE="text" NAME="Apellido"> <br>
+                Dirección: <BR>
+                <INPUT TYPE="text" NAME="Direccion"> <br>
+                Teléfono: <BR>
+                <INPUT TYPE="text" NAME="Telefono"> <br>
+                Comentarios:<br>
+                <TEXTAREA NAME="comentario" ROWS="7" COLS="40"></TEXTAREA>
+                <br>
+                <INPUT TYPE="submit" VALUE="Enviar datos">
+                <INPUT TYPE="reset" VALUE="Borrar datos">
+                <br><br>
+            </FORM>
+        </div>
+        <div class="mPost">
+            <FORM method="POST" action="parametros.html"> 
+                <h3>Método POST</h3>
+                Nombre: <BR>
+                <INPUT TYPE="text" NAME="nom"> <br>
+                Dirección: <BR>
+                <INPUT TYPE="text" NAME="adress"> <br>
+                Teléfono: <BR>
+                <INPUT TYPE="text" NAME="tel"> <br>
+                Comentarios:<br>
+                <TEXTAREA NAME="com" ROWS="7" COLS="40"></TEXTAREA>
+                <br>
+                <INPUT TYPE="submit" VALUE="Enviar datos">
+                <INPUT TYPE="reset" VALUE="Borrar datos">
+                <br><br>
+            </FORM>
+        </div>
+    </div>    
+</body>
+<style>    
+    body{
+        background-color: blueviolet;
+        color: white;
+    }
+    .header{
+        text-align: center;            
+        font-weight: bold;
+        font-size: 25px;
+    }
+    .header .img{
+        height: 400px;
+    }
+    .contenedor{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row: auto;        
+        align-items: center;
+        justify-items: center;
+    }
+    .mGet, .mPost{
+        width: 80%;
+        text-align: center;
+    }
+    .mGet input[type=text], 
+    .mGet textarea,
+    .mPost input[type=text],
+    .mPost textarea{
+        color: blueviolet;
+        text-align: center;
+        font-weight: bold;
+    }
+    .mGet input[type=text],
+    .mPost input[type=text]{
+        height: 20px;        
+        width: 200px;
+    }
+    .mGet input[type=submit],
+    .mGet input[type=reset],
+    .mPost input[type=submit],
+    .mPost input[type=reset]{
+        width: 150px;
+        height: 30px;
+        margin: 10px 15px;
+        font-size: 15px;
+    }
+</style>
+</html>
